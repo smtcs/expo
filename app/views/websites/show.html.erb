@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @website.owner %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @website.link %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @website.desc %>
+</p>
+
+<%= link_to 'Edit', edit_website_path(@website) %> |
+<%= link_to 'Back', websites_path %>
