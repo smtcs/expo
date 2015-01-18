@@ -7,6 +7,10 @@ class WebsitesController < ApplicationController
     @websites = Website.all
   end
 
+  def table
+    @websites = Website.all
+  end
+
   # GET /websites/1
   # GET /websites/1.json
   def show

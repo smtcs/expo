@@ -1,19 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Owner:</strong>
-  <%= @website.owner %>
-</p>
+<%= div_for @website do %>
+  <h1 class="page-header">Website by <%= @website.owner %></h1>
+  <%= link_to(image_tag("/img/#{@website.id}.png", alt: "#{@website.owner}'s Site"), @website.link) %>
+  <p><%= @website.desc %></p>
+<% end %>
 
-<p>
-  <strong>Link:</strong>
-  <%= @website.link %>
-</p>
-
-<p>
-  <strong>Desc:</strong>
-  <%= @website.desc %>
-</p>
-
-<%= link_to 'Edit', edit_website_path(@website) %> |
-<%= link_to 'Back', websites_path %>
+<%= link_to 'Back', websites_path, class: 'btn btn-primary' %>

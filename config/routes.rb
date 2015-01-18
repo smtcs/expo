@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  resources :websites
+  get '/table', to: 'websites#table'
+  resources :websites, :path => '/'
 end

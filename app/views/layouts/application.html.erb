@@ -5,19 +5,9 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <style>body{margin-top:20px;margin-bottom:20px}</style>
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">Summit Website Expo</a>
-        </div>
-
-        <ul class="nav navbar-nav">
-          <%# <%= active_link_to 'Posts', posts_path, :wrap_tag => :li %>
-        </ul>
-      </div>
-    </nav>
     <div class="container">
       <%= yield %>
     </div>
