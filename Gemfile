@@ -13,6 +13,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'will_paginate-bootstrap'
+gem 'rails_12factor'
 
 group :development, :test do
   gem 'spring'
