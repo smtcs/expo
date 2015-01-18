@@ -1,5 +1,6 @@
 class WebsitesController < ApplicationController
   before_action :set_website, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate, :except => [ :index, :show ]
 
   # GET /websites
   # GET /websites.json
@@ -74,5 +75,12 @@ class WebsitesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def website_params
       params.require(:website).permit(:owner, :link, :desc)
+    end
+
+    # Authenticate so only admins can create new sites
+    def authenticate
+      authenticate_or_request_with_http_basic do |name, password|
+        name == "admin" && password == "secret"
+      end
     end
 end
