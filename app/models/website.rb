@@ -4,7 +4,7 @@ class Website < ActiveRecord::Base
   validates_presence_of :link, :owner, :desc
 
   def image
-    "<img src='http://ascreen.herokuapp.com/?url=#{self.link}&quality=1' alt='Image for #{self.owner}' class='screenshot'>".html_safe
+    "<img src='http://ascreen.herokuapp.com/?url=#{self.link}&width=1920&height=1080&quality=1&quality=1' alt='Image for #{self.owner}' class='screenshot'>".html_safe
   end
 
   private
