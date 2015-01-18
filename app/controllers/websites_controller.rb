@@ -60,7 +60,7 @@ class WebsitesController < ApplicationController
   def destroy
     @website.destroy
     respond_to do |format|
-      format.html { redirect_to websites_url, notice: 'Website was successfully destroyed.' }
+      format.html { redirect_to table_url, notice: 'Website was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

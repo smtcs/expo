@@ -2,7 +2,7 @@
 
 <%= div_for @website do %>
   <h1 class="page-header">Website by <%= @website.owner %></h1>
-  <%= link_to(image_tag("/img/#{@website.id}.png", alt: "#{@website.owner}'s Site"), @website.link) %>
+  <%= link_to @website.image, @website.link %>
   <p><%= @website.desc %></p>
 <% end %>
 

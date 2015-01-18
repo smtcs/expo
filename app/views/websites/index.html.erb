@@ -1,6 +1,10 @@
-<% @websites.each do |site| %>
-  <%= div_for site do %>
-    <h2 class="page-header"><%= site.owner %>'s Website</h2>
-    <%= link_to(image_tag("/img/#{site.id}.png", alt: "#{site.owner}'s Site"), site) %>
+<% if @websites != [] %>
+  <% @websites.each do |site| %>
+    <%= div_for site do %>
+      <h2 class="page-header"><%= site.owner %>'s Website</h2>
+      <%= link_to site.image, site %>
+    <% end %>
   <% end %>
+<% else %>
+  <h1>Oops, looks like there aren't any sites yet</h1>
 <% end %>

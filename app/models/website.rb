@@ -4,11 +4,7 @@ class Website < ActiveRecord::Base
   validates_presence_of :link, :owner, :desc
 
   def image
-    "<img src='http://api.page2images.com/directlink?p2i_url=#{self.link}&p2i_key=#{ENV['SCREENSHOT_API_KEY']}' alt='Image for #{self.owner}'>".html_safe
-  end
-
-  def image_src
-    "http://api.page2images.com/restfullink?p2i_url=#{self.link}&p2i_key=#{ENV['SCREENSHOT_API_KEY']}"
+    "<img src='http://ascreen.herokuapp.com/?url=#{self.link}&quality=1' alt='Image for #{self.owner}'>".html_safe
   end
 
   private
