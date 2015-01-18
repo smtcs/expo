@@ -5,7 +5,7 @@ class WebsitesController < ApplicationController
   # GET /websites
   # GET /websites.json
   def index
-    @websites = Website.all
+    @websites = Website.paginate(:page => params[:page], :per_page => 10)
   end
 
   def table

@@ -18,8 +18,6 @@ RSpec.describe "websites/index", :type => :view do
 
   it "renders a list of websites" do
     render
-    assert_select "tr>td", :text => "Owner".to_s, :count => 2
-    assert_select "tr>td", :text => "Link".to_s, :count => 2
-    assert_select "tr>td", :text => "MyText".to_s, :count => 2
+    assert_select "h2", :text => "Owner".to_s, :count => 2
   end
 end

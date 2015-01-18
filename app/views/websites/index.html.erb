@@ -5,6 +5,9 @@
       <%= link_to site.image, site %>
     <% end %>
   <% end %>
+  <div class="text-center">
+    <%= will_paginate @websites, renderer: BootstrapPagination::Rails %>
+  </div>
 <% else %>
   <h1>Oops, looks like there aren't any sites yet</h1>
 <% end %>
